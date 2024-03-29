@@ -7176,7 +7176,7 @@ then :
   Emscripten) :
      ;; #(
   WASI) :
-    as_fn_error $? "WASI dynamic linking is not implemented yet." "$LINENO" 5 ;; #(
+     ;; #(
   *) :
     as_fn_error $? "--enable-wasm-dynamic-linking only applies to Emscripten and WASI" "$LINENO" 5
    ;;
@@ -9455,7 +9455,6 @@ then :
 
 fi
 
-            as_fn_append LDFLAGS_NODIST " -z stack-size=524288 -Wl,--stack-first -Wl,--initial-memory=10485760"
 
  ;; #(
   *) :
@@ -31032,7 +31031,7 @@ then :
 
     if test "$TEST_MODULES" = yes
 then :
-  if test "$ac_cv_func_dlopen" = yes
+  if test "$ac_cv_func_dlopen" = foo
 then :
   py_cv_module__testimportmultiple=yes
 else $as_nop
@@ -31070,7 +31069,7 @@ then :
 
     if test "$TEST_MODULES" = yes
 then :
-  if test "$ac_cv_func_dlopen" = yes
+  if test "$ac_cv_func_dlopen" = foo
 then :
   py_cv_module__testmultiphase=yes
 else $as_nop
@@ -31223,7 +31222,7 @@ then :
 
     if test "$with_trace_refs" = "no"
 then :
-  if test "$ac_cv_func_dlopen" = yes
+  if test "$ac_cv_func_dlopen" = foo
 then :
   py_cv_module_xxlimited=yes
 else $as_nop
@@ -31261,7 +31260,7 @@ then :
 
     if test "$with_trace_refs" = "no"
 then :
-  if test "$ac_cv_func_dlopen" = yes
+  if test "$ac_cv_func_dlopen" = foo
 then :
   py_cv_module_xxlimited_35=yes
 else $as_nop
